@@ -35,10 +35,23 @@ namespace CarNS
                 * otherwise, if miles is not greater than maxDistance,
                 * then milesAbleToTravel = miles
                 */
+            // The is a ternary operator conditional expression
             double milesAbleToTravel = miles > maxDistance ? maxDistance : miles;
+            /*
+                if (miles > maxDistance) 
+                {
+                    milesAbleToTravel = maxDistance;
+                } 
+                else 
+                {
+                    milesAbleToTravel = miles;
+                }
+             */
             double gallonsUsed = milesAbleToTravel / MilesPerGallon;
             GasTankLevel -= gallonsUsed;
+            // GasTankLevel = GasTankLevel - gallonsUsed;
             Odometer += milesAbleToTravel;
+            // Odometer = Odometer + milesAbleToTravel;
         }
 
     }
